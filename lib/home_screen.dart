@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
             tooltip: 'This is favorites icon',
             icon: Icon(Icons.favorite_outline),
             activeIcon: Icon(Icons.favorite),
-            label: 'My Favorites',
+            label: 'Favorites',
           ),
           BottomNavigationBarItem(
             tooltip: 'This is settings icon',
