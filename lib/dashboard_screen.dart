@@ -1,14 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:test_project/screens/account_screen.dart';
+import 'package:test_project/screens/favorite_screen.dart';
+import 'package:test_project/screens/home_screen.dart';
+import 'package:test_project/screens/profile_screen.dart';
+import 'package:test_project/screens/settings_screen.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class DashboardScreen extends StatefulWidget {
+  const DashboardScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<DashboardScreen> createState() => _DashboardScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _DashboardScreenState extends State<DashboardScreen> {
   int selectedIndex = 0;
+
+  List<Widget> body = const [
+    HomeScreen(),
+    ProfileScreen(),
+    AccountScreen(),
+    FavoriteScreen(),
+    SettingsScreen(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -59,9 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: const Center(
-        child: Text('Welcome to home screen'),
-      ),
+      body: body[selectedIndex],
     );
   }
 }

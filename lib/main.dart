@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_project/home_screen.dart';
+import 'package:test_project/dashboard_screen.dart';
 
 void main() {
   runApp(const MyCounterApp());
@@ -10,7 +10,7 @@ class MyCounterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomeScreen(),
+      home: DashboardScreen(),
     );
   }
 }
