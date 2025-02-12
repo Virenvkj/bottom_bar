@@ -5,9 +5,46 @@ class FavoriteScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text('Favorite'),
+        child: Container(
+          color: Colors.blue,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              ColoredBox(
+                color: Colors.yellow,
+                child: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.add_circle,
+                    size: 30,
+                  ),
+                ),
+              ),
+              const ColoredBox(
+                color: Colors.teal,
+                child: Text(
+                  'Press this button',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+              ColoredBox(
+                color: Colors.green,
+                child: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.circle_notifications,
+                    size: 30,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
